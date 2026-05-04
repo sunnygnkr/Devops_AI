@@ -16,26 +16,17 @@
 
       <section class="meme-grid" aria-label="Bollywood meme images">
         {% for meme in memes %}
-          <a class="meme-card" href="{{ meme.post_url }}" target="_blank" rel="noreferrer">
+          <div class="meme-card">
             <img src="{{ meme.image_url }}" alt="{{ meme.title }}" loading="lazy">
-          </a>
+          </div>
         {% endfor %}
       </section>
 
       {% if not memes %}
         <section class="empty-state">
-          <p>Could not load live meme images right now. Try refreshing after the app has internet access.</p>
+          <p>Could not load meme images right now. Try refreshing after the app has internet access.</p>
         </section>
       {% endif %}
-
-      <section class="links-panel">
-        <h2>Latest Redgifs Links</h2>
-        <div class="links-list">
-          {% for item in redgifs_links %}
-            <a href="{{ item.url }}" target="_blank" rel="noreferrer">{{ item.title }}</a>
-          {% endfor %}
-        </div>
-      </section>
     </main>
   </body>
 </html>
