@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sachin Tendulkar — The Legend</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+
+  <header>
+    <h1>&#127955; Sachin Tendulkar</h1>
+    <p class="subtitle">The God of Cricket — 100 International Centuries &bull; Bharat Ratna &bull; World Cup 2011</p>
+  </header>
+
+  <main class="gallery">
+    {% for img in images %}
+    <div class="card">
+      <div class="thumb-wrap">
+        <img
+          src="{{ img.url }}"
+          alt="{{ img.title }}"
+          loading="lazy"
+          onerror="this.src='https://via.placeholder.com/400x260?text=Image+Unavailable'"
+        />
+      </div>
+      <div class="card-body">
+        <h2>{{ img.title }}</h2>
+        <p>{{ img.description }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </main>
+
+  <footer>
+    <p>Built with Flask &bull; Sachin Tendulkar Fan Gallery</p>
+  </footer>
+
+</body>
+</html>
