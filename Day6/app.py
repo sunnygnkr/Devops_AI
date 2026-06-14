@@ -5,7 +5,7 @@ app = Flask(__name__)
 images = [
     {
         "title": "The Master Blaster",
-        "description": "Sachin Tendulkar — India's greatest batsman, 100 international centuries.",
+        "description": "Sachin Tendulkar — World's greatest batsman, 100 international centuries.",
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Sachin_Tendulkar_in_ICC_World_Twenty20_warm_up_match.jpg/640px-Sachin_Tendulkar_in_ICC_World_Twenty20_warm_up_match.jpg",
     },
     {
